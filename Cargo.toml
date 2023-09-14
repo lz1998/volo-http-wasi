@@ -1,0 +1,24 @@
+[package]
+name = "volo-http-wasi"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio_wasi = { version = "1", features = ["full"] }
+hyper_wasi = { features = ["server", "http1", "http2"], git = "https://github.com/WasmEdge/hyper.git", branch = "master" }
+bytes = "1"
+http-body-util = "0.1.0-rc.3"
+http = { version = "0.2" }
+#hyper-util = { git = "https://github.com/hyperium/hyper-util.git" }
+matchit = { version = "0.7" }
+motore = { version = "0.3" }
+tracing = "0.1"
+futures-util = "0.3"
+pin-project-lite = "0.2"
+serde_json = "1"
+thiserror = "1"
+mime = "0.3"
+serde = { version = "1", features = ["derive"] }
+async-trait = "0.1"
